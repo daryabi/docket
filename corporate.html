@@ -1,0 +1,984 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="apple-touch-icon" sizes="76x76" href="assets/img/apple-icon.png">
+  <link rel="icon" type="image/png" href="assets/img/favicon.png">
+  <title>
+    Purnama Docket Managesment
+  </title>
+  <!--     Fonts and icons     -->
+  <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,600,700,800" rel="stylesheet" />
+  <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+  <!-- Nucleo Icons -->
+  <link href="assets/css/nucleo-icons.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="assets/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
+  <!-- CSS Just for demo purpose, don't include it in your project -->
+  <link href="assets/demo/demo.css" rel="stylesheet" />
+</head>
+
+<body class="">
+  <div class="wrapper">
+    <div class="sidebar">
+      <!--
+        Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
+    -->
+    <div class="sidebar-wrapper">
+        <div class="logo">
+          <a href="javascript:void(0)" class="simple-text logo-mini">
+            Purnama
+          </a>
+          <a href="javascript:void(0)" class="simple-text logo-normal">
+            Docket Management
+          </a>
+        </div>
+        <ul class="nav">
+          <li >
+            <a href="./dashboard.html">
+              <i class="tim-icons icon-chart-pie-36"></i>
+              <p>Dashboard</p>
+            </a>
+          </li>
+          <li >
+            <a href="./form.html">
+              <i class="tim-icons icon-simple-add"></i>
+              <p>Add</p>
+            </a>
+          </li>
+          <li >
+            <a href="./docket.html">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Dockets</p>
+            </a>
+          </li>
+          <li>
+            <a href="./user.html">
+              <i class="tim-icons icon-single-02"></i>
+              <p>User Profile</p>
+            </a>
+          </li>
+          <li>
+            <a href="./tables.html">
+              <i class="tim-icons icon-badge"></i>
+              <p>Staff</p>
+            </a>
+          </li>
+          <li class="active ">
+            <a href="./site.html">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Site</p>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="main-panel">
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-absolute navbar-transparent">
+        <div class="container-fluid">
+          <div class="navbar-wrapper">
+            <div class="navbar-toggle d-inline">
+              <button type="button" class="navbar-toggler">
+                <span class="navbar-toggler-bar bar1"></span>
+                <span class="navbar-toggler-bar bar2"></span>
+                <span class="navbar-toggler-bar bar3"></span>
+              </button>
+            </div>
+            <a class="navbar-brand" href="javascript:void(0)">Site Table List</a>
+          </div>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+            <span class="navbar-toggler-bar navbar-kebab"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navigation">
+            <ul class="navbar-nav ml-auto">
+              <li class="search-bar input-group">
+                <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split" ></i>
+                  <span class="d-lg-none d-md-block">Search</span>
+                </button>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="notification d-none d-lg-block d-xl-block"></div>
+                  <i class="tim-icons icon-sound-wave"></i>
+                  <p class="d-lg-none">
+                    Notifications
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                    <li class="nav-link"><a href="#" class="nav-item dropdown-item">Fang John responded to your email</a></li>
+                    <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
+                   
+                  </ul>
+              </li>
+              <li class="dropdown nav-item">
+                <a href="./index.html" class="dropdown-toggle nav-link" data-toggle="dropdown">
+                  <div class="photo">
+                    <img src="assets/img/anime3.png" alt="Profile Photo">
+                  </div>
+                  <b class="caret d-none d-lg-block d-xl-block"></b>
+                  <p class="d-lg-none">
+                    Log out
+                  </p>
+                </a>
+                <ul class="dropdown-menu dropdown-navbar">
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Profile</a></li>
+                  <!-- <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Settings</a></li> -->
+                  <li class="dropdown-divider"></li>
+                  <li class="nav-link"><a href="./index.html" class="nav-item dropdown-item">Log out</a></li>
+                </ul>
+              </li>
+              <li class="separator d-lg-none"></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="modal modal-search fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModal" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <input type="text" class="form-control" id="inlineFormInputGroup" placeholder="SEARCH">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <i class="tim-icons icon-simple-remove"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- End Navbar -->
+      <div class="content">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="card ">
+              <div class="card-header">
+                <ul style="list-style-type: none;
+                margin: 0;
+                padding: 0;">
+                  <li style="display: inline; padding-right: 20px;">
+                    <a href="./site.html">
+                    <h4 class="card-title" style="float: left;   "> MOE PM Summary 2020</h4>
+                  </a></li>
+                  <li style="display: inline; padding-right: 20px; border-radius: 20px; "><a href="./siteTable.html" style="border-radius: 20px;">
+                    <!-- <button> -->
+                      <h4 class="card-title" style="float: left; padding-left: 20px; border-radius: 20px;"> Site Details and table</h4>
+                    <!-- </button> -->
+                  </a></li>
+                  <li style="display: inline; padding-right: 20px; border-radius: 20px;  "><a href="./corporate.html" style="border-radius: 20px;">
+                    <!-- <button> -->
+                      <h4 class="card-title" style="float: left; padding-left: 20px; border-radius: 20px;  color: gray;"> corporate  Details and table</h4>
+                    <!-- </button> -->
+                  </a></li>
+                </ul>
+              </div>
+              
+             <div class="card-body">
+                <div class="card-header">
+                    <h4 class="card-title">BHPETROL List</h4>
+                    <!-- <p class="category"> Here is a subtitle for this table</p> -->
+                  </div>
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                      <tr>
+                        <th scope="col">NO</th>
+                        <th>TERMINAL ID</th>
+                        <th>TERMINAL Name</th>
+                        <th>SITE Name</th>
+                        <th>LAT</th>
+                        <th>LONG</th>
+                        <th>CUSTOMER NAME</th>
+                        <th>STATE</th>
+                        <th>ADDRESS/CONTACT</th>
+                        <th>HW TYPE</th>
+                        <th>MAC ADDRESS</th>
+                        <th>MANAGEMENT IP ADDRESS</th>
+                        <th>VSAT ID</th>
+                        <th>PM DATE</th>
+                        <th>ESNO READING</th>
+                        <th>GROUNDING READING</th>
+                        <th>REMARK</th>
+                        <th>FIRMWARE UPGRADE V42</th>
+                        
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <th scope="row">1</th>
+                        <td>2001</td>
+                        <td>VBBHPDJA2001</td>
+                        <td>BHPETROL DAMANSARA JAYA</td>
+                        <td>3.1019</td>
+                        <td>101.591</td>
+                        <td>BHPetrol Damansara Jaya</td>
+                        <td>Selangor</td>
+                        <td>Mr Cheah Kim Lot 012-2275752 / PT 1085, Lebuhraya Petaling Jaya, 47400 Petaling Jaya, Selangor</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-04-36</td>
+                        <td>172.1.5.82</td>
+                        <td>1362</td>
+                        <td>20/4/2020</td>
+                        <td>11.12</td>
+                        <td>2.13</td>
+                        <td>14/4/2021</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>2002</td>
+                        <td>VBBHPDJA2001</td>
+                        <td>BHPETROL DAMANSARA UTAMA</td>
+                        <td>3.1382</td>
+                        <td>101.6237</td>
+                        <td>BHPetrol Damansara Utama</td>
+                        <td>Selangor</td>
+                        <td>Ahmad Zaini Lot012-2228716/ PT 1889, Jln SS 21/56, Damansara Utama, 47400 Petaling Jaya, Selangor</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-09-2F</td>
+                        <td>172.1.5.232</td>
+                        <td>1512</td>
+                        <td>20/4/2020</td>
+                        <td>11.12</td>
+                        <td>2.13</td>
+                        <td>10/22/20</td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                          <th scope="row">3</th>
+                          <td>2003</td>
+                          <td>VWBHPMAA2003</td>
+                          <td>BHPETROL JALAN MAAROF</td>
+                          <td>3.1339</td>
+                          <td>101.6722</td>
+                          <td>BHPetrol Jalan Maarof</td>
+                          <td>Kuala Lumpur</td>
+                          <td>BHPetrol Jalan Ma'arof, No. 78, Jalan Bangsar Baru, 59000 Kuala Lumpur.</td>
+                          <td>Gemini</td>
+                          <td>00-A0-AC-21-6A-C7</td>
+                          <td>172.1.5.116</td>
+                          <td>1396</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>10/11/2020</td>
+                          <td></td>
+                      </tr>
+                      <tr>
+                        <th scope="row">4</th>
+                        <td>2005</td>
+                        <td>VBBHPJSS2005</td>
+                        <td>BHPETROL JALAN SS2</td>
+                        <td>3.1184</td>
+                        <td>101.6235</td>
+                        <td>BHPetrol SS2</td>
+                        <td>Selangor</td>
+                        <td>BHPetrol SS2, Lot 25685, Jalan SS 2/60, 47300 Petaling Jaya, Selangor.</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-08-7E</td>
+                        <td>172.1.5.143</td>
+                        <td>1423</td>
+                        <td>14/1/2020</td>
+                        <td>10.4</td>
+                        <td>1.58</td>
+                        <td>4/5/2021</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>2006</td>
+                        <td>VBBHPSKA2006</td>
+                        <td>BHPETROL KAMPUNG SUNGAI KAYU ARA</td>
+                        <td>3.1328</td>
+                        <td>101.6113</td>
+                        <td>BHPetrol Sungai Kayu Ara</td>
+                        <td>Selangor</td>
+                        <td>BHPetrol Kg Sg Kayu Ara, LOT 13639, Jalan Kenanga off Jln Damansara Highway, 47400 Petaling Jaya, Selangor.</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-04-49</td>
+                        <td>172.1.5.105</td>
+                        <td>1385</td>
+                        <td>14/1/2020</td>
+                        <td>9.48</td>
+                        <td>2.44</td>
+                        <td>14/4/2021</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>2007</td>
+                        <td>VWBHPKLK2007</td>
+                        <td>BHP LEBUHRAYA KL-KLANG</td>
+                        <td>3.0619</td>
+                        <td>101.5026</td>
+                        <td>BHPetrol Lebuhraya KL-Klang</td>
+                        <td>Selangor</td>
+                        <td>BHPetrol Lebuhraya KL-Klang, LOT 711 Section 16, Lebuhraya Persekutuan 2, 40000 Shah Alam, Selangor. </td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-09-45</td>
+                        <td>172.1.5.9</td>
+                        <td>1289</td>
+                        <td>8/1/2020</td>
+                        <td>10.99</td>
+                        <td>2.41</td>
+                        <td>24/2/2021</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>2008</td>
+                        <td>VBBHPCRS2008</td>
+                        <td>BHPETROL JALAN CHERAS 1 & 2</td>
+                        <td>3.1075</td>
+                        <td>101.7304</td>
+                        <td>BHPetrol Jalan Cheras 1&2</td>
+                        <td>Kuala Lumpur</td>
+                        <td>BHPetrol Jln Cheras 1 & 2, Batu 4 1/2, Jalan Cheras, 56100 Kuala Lumpur.</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-22-EE-F7</td>
+                        <td>172.1.6.2</td>
+                        <td>1538</td>
+                        <td>22/1/2020</td>
+                        <td>11.5</td>
+                        <td>2.41</td>
+                        <td>15/8/2020</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">8</th>
+                        <td>2009</td>
+                        <td>VBBHPSEA2009</td>
+                        <td>BHPETROL SEA PARK</td>
+                        <td>3.1132</td>
+                        <td>101.6269</td>
+                        <td>BHPetrol S.E.A Park</td>
+                        <td>Selangor</td>
+                        <td>-</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-09-36</td>
+                        <td>172.1.5.226</td>
+                        <td>1506</td>
+                        <td>25/5/2020</td>
+                        <td>10.5</td>
+                        <td>1.86</td>
+                        <td>5/10/2020</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">9</th>
+                        <td>2010</td>
+                        <td>VBBHPBCA2010</td>
+                        <td>BHPETROL BATU CAVES</td>
+                        <td>3.2365</td>
+                        <td>101.6965</td>
+                        <td>BHPetrol Batu Caves</td>
+                        <td>Selangor</td>
+                        <td>BHPetrol Batu Caves, Lot PT 8359, Jalan Batu Caves, 68100 Batu Caves, Selangor.</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-0A-0E</td>
+                        <td>172.1.5.164</td>
+                        <td>1444</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>26/8/2020</td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <th scope="row">10</th>
+                        <td>2011</td>
+                        <td>VBBHPKLK2011</td>
+                        <td>BHPETROL LEBUHRAYA KL-KARAK</td>
+                        <td>3.2535</td>
+                        <td>101.7278</td>
+                        <td>BHPetrol Lebuhraya KL-Karak</td>
+                        <td>Selangor</td>
+                        <td>BHPetrol KL-Karak Highway, Km 21 KL-Karak Highway, 53100 Gombak, Kuala Lumpur.</td>
+                        <td>Gemini</td>
+                        <td>00-A0-AC-23-06-D0</td>
+                        <td>172.1.5.14</td>
+                        <td>1294</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td>26/8/2020</td>
+                        <td></td>
+                        
+                    </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="card  card-plain">
+              <div class="card-header">
+                <h4 class="card-title">SME List</h4>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table tablesorter " id="">
+                    <thead class=" text-primary">
+                        <tr>
+                            <th scope="col">NO</th>
+                            <th>HUB</th>
+                            <th>CPA</th>
+                            <th>LRD</th>
+                            <th>CIRCUIT ID</th>
+                            <th>CUSTOMER-NAME</th>
+                            <th>SITE-NAME</th>
+                            <th>STATE</th>
+                            <th>REMARKS</th>
+                            <th>ONLINE</th>
+                            <th>MORE INFO</th>
+                            
+                          </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>SE1 Std C</td>
+                            <td>1293</td>
+                            <td>VNEINEXC1293</td>
+                            <td>MCAVW1293</td>
+                            <td>Excel Training & Country Resorts Sdn Bhd</td>
+                            <td>Excel Training & Country Resorts</td>
+                            <td>Negeri Sembilan</td>
+                            <td>23/11/2020</td>
+                            <td>ONLINE</td>
+                            <td></td>
+
+
+                          </tr>
+                          <tr>
+                            <th scope="row">2</th>
+                            <td>SE1 Std C</td>
+                            <td>1369</td>
+                            <td>INT_SQIPKA</td>
+                            <td>MCAVW1369</td>
+                            <td>HARDY BUILDERS</td>
+                            <td> Dungun</td>
+                            <td>TERENGGANU</td>
+                            <td>28/8/2020</td>
+                            <td>ONLINE</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">3</th>
+                            <td>SE1 Std C</td>
+                            <td>1371</td>
+                            <td>INT_AEPPEN</td>
+                            <td>MCAVW1371</td>
+                            <td>Ladang Cenderung Putera</td>
+                            <td>Kemaman</td>
+                            <td>TERENGGANU</td>
+                            <td>19/1/2021</td>
+                            <td>ONLINE</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>SE1 Std C</td>
+                            <td>1372</td>
+                            <td>INT_AEPPES</td>
+                            <td>MCAVW1372</td>
+                            <td>Ladang Cenderung Putera</td>
+                            <td>South Bandar Cheneh Baru</td>
+                            <td>TERENGGANU</td>
+                            <td>GROUNDING LOOP</td>
+                            <td>ONLINE</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>SE1 Std C</td>
+                            <td>1510</td>
+                            <td>VAEINTMQ1510</td>
+                            <td>MCAVW1510</td>
+                            <td>Minetech Bidor</td>
+                            <td> Bukit Tapah</td>
+                            <td>Perak</td>
+                            <td>13/4/2021</td>
+                            <td>ONLINE</td>
+                            <td></td>
+                          </tr>
+                          <tr>
+                              <th scope="row">6</th>
+                            <td>SE1 Std C</td>
+                            <td>1581</td>
+                            <td>VJEJOPAK1581</td>
+                            <td>MCAVW1581</td>
+                            <td>Perbadanan Taman Negara Johor</td>
+                            <td>Kluang</td>
+                            <td>JOHOR</td>
+                            <td></td>
+                            <td>ONLINE</td>
+                            <td></td>
+                          </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+              <div class="card ">                
+               <div class="card-body">
+                  <div class="card-header">
+                      <h4 class="card-title">SAJ List</h4>
+                      <!-- <p class="category"> Here is a subtitle for this table</p> -->
+                    </div>
+                  <div class="table-responsive">
+                    <table class="table tablesorter " id="">
+                      <thead class=" text-primary">
+                        <tr>
+                            <th scope="col">NO</th>
+                            <th>HUB</th>
+                            <th>CPA(VSAT-ID)</th>
+                            <th>VSAT LRD</th>
+                            <th>CIRCUIT-ID</th>
+                            <th>CUSTOMER-NAME</th>
+                            <th>SITE LRD</th>
+                            <th>SITE-NAME</th>
+                            <th>STATE</th>
+                            <th>IP-ADDRESS</th>
+                            <th>QOS-PIPE</th>
+                            <th>BANDWIDTH</th>
+                            <th>SERVICES</th>
+                            <th>BAND-TYPE</th>
+                            <th>BEAM -NO(KU-BAND Only)</th>
+                            <th>LATITITUDE</th>
+                            <th>LONGITUDE</th>
+                            <th>ESNO</th>
+                            <th>GROUNDING</th>
+                            <td>DATE OF PM</td>
+                            <td>REMARKS</td>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>SE2 Clawback 3 Beam 213</td>
+                            <td>1800</td>
+                            <td>VJMSAJSB1800</td>
+                            <td>MCAVW1800</td>
+                            <td>Syarikat Air Johor</td>
+                            <td>JGP0</td>
+                            <td>LRA Gunong Pulai</td>
+                            <td>Johor</td>
+                            <td>192.200.81.1/24</td>
+                            <td>SAJ 1.2M/1.2M</td>
+                            <td>1.2M/1.2Mbps</td>
+                            <td>SAJ</td>
+                            <td>Ku-band</td>
+                            <td>213</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>GROUNDING LOOP</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>SE2 Clawback 3 Beam 213</td>
+                            <td>1801</td>
+                            <td>VJMSAJSB1801</td>
+                            <td>MCAVW1801</td>
+                            <td>Syarikat Air Johor</td>
+                            <td>JKB1</td>
+                            <td>LRA Kahang Baru</td>
+                            <td>Johor</td>
+                            <td>192.200.151.1/24</td>
+                            <td>SAJ 1.2M/1.2M</td>
+                            <td>1.2M/1.2Mbps</td>
+                            <td>SAJ</td>
+                            <td>Ku-band</td>
+                            <td>2.1236</td>
+                            <td>103.3126</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td>9/5/2021</td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>SE2 Clawback 3 Beam 213</td>
+                          <td>1803</td>
+                          <td>VJMSAJSB1803</td>
+                          <td>MCAVW1803</td>
+                          <td>Syarikat Air Johor</td>
+                          <td>JBT3</td>
+                          <td>LRA Bandar Tenggara</td>
+                          <td>Johor</td>
+                          <td>192.200.114.1/24</td>
+                          <td>SAJ 1.2M/1.2M</td>
+                          <td>1.2M/1.2Mbps</td>
+                          <td>SAJ</td>
+                          <td>Ku-band</td>
+                          <td>213</td>
+                          <td>1.5153</td>
+                          <td>103.3557</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>9/5/2021</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">4</th>
+                            <td>SE2 Clawback 3 Beam 213</td>
+                          <td>1804</td>
+                          <td>VJMSAJSB1804</td>
+                          <td>MCAVW1804</td>
+                          <td>Syarikat Air Johor</td>
+                          <td>JLG4</td>
+                          <td>LRA Linggiu</td>
+                          <td>Johor</td>
+                          <td>192.200.116.1/24</td>
+                          <td>SAJ 1.2M/1.2M</td>
+                          <td>1.2M/1.2Mbps</td>
+                          <td>SAJ</td>
+                          <td>Ku-band</td>
+                          <td>213</td>
+                          <td>1.4759</td>
+                          <td>103.4322</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>20/7/2020</td>
+                          </tr>
+                          <tr>
+                            <th scope="row">5</th>
+                            <td>SE2 Clawback 3 Beam 213</td>
+                          <td>1805</td>
+                          <td>VJMSAJSB1805</td>
+                          <td>MCAVW1805</td>
+                          <td>Syarikat Air Johor</td>
+                          <td>JLH5</td>
+                          <td>LRA Lok Heng</td>
+                          <td>Johor</td>
+                          <td>192.200.119.1/24</td>
+                          <td>SAJ 1.2M/1.2M</td>
+                          <td>1.2M/1.2Mbps</td>
+                          <td>SAJ</td>
+                          <td>Ku-band</td>
+                          <td>213</td>
+                          <td>1.4432</td>
+                          <td>104.86</td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td>1/10/2020</td>
+                          </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-12">
+              <div class="card  card-plain">
+                <div class="card-header">
+                  <h4 class="card-title">SYABAS List</h4>
+                </div>
+                <div class="card-body">
+                  <div class="table-responsive">
+                    <table class="table tablesorter " id="">
+                      <thead class=" text-primary">
+                          <tr>
+                              <th scope="col">NO</th>
+                              <th>Band</th>
+                              <th>Hub</th>
+                              <th>SITE</th>                              
+                              <th>CUSTOMER-NAME</th>
+                              <th>LRD</th>
+                              <th>ADDRESS</th>
+                              <th>CUSTOMER-CONTACT</th>
+                              <th>ESNO</th>
+                              <th>GROUNDING</th>
+                              <th>DATE OF PM</th>
+                              <th>REMARKS</th>
+                              
+                            </tr>
+                      </thead>
+                      <tbody>
+                          <tr>
+                              <th scope="row">1</th>
+                              <td>C</td>
+                              <td>SE2</td>
+                              <td>SUNGAI BUAYA WTP </td>
+                              <td>SYARIKAT BEKALAN AIR SELANGOR SDN BHD</td>
+                              <td>VBXSYSBW10143</td>
+                              <td>Sungai Buaya, Serendah, Rawang, Selangor</td>
+                              <td>Kamarul Arifin  013-5883066</td>
+                              <td>8.6</td>
+                              <td>2.13</td>
+                              <td>11/3/2020</td>
+                              <td>CPI/Clean up</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">2</th>
+                              <td>C</td>
+                              <td>SE2</td>
+                              <td>BATANG KALI WTP </td>
+                              <td>SYARIKAT BEKALAN AIR SELANGOR SDN BHD</td>
+                              <td>VBXSYBKW10141</td>
+                              <td>Kampung Kuantan, Batang Kali, Rawang, Selangor</td>
+                              <td>Kamarul Arifin  013-5883066</td>
+                              <td>8.42</td>
+                              <td>3.78</td>
+                              <td>11/3/2020</td>
+                              <td>CPI/Clean up</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">3</th>
+                              <td>C</td>
+                              <td>SE2</td>
+                              <td>Rumah Pam Panca Rasmi</td>
+                              <td>SYARIKAT BEKALAN AIR SELANGOR SDN BHD</td>
+                              <td>VBXSYSSP10140</td>
+                              <td>Bukit Beruntung, Selangor</td>
+                              <td>Kamarul Arifin  013-5883066</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>11/5/2021</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">4</th>
+                              <td>C</td>
+                              <td>SE2</td>
+                              <td>SUNGAI DUSUN WTP </td>
+                              <td>SYARIKAT BEKALAN AIR SELANGOR SDN BHD</td>
+                              <td>VBXSYSDW10142</td>
+                              <td>Kuala Kubu Baru, Selangor</td>
+                              <td>Kamarul Arifin  013-5883066</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>17/3/2021</td>
+                            </tr>
+                            <tr>
+                              <th scope="row">5</th>
+                              <td>C</td>
+                              <td>SE2</td>
+                              <td>Rumah Pam Batu Estate</td>
+                              <td>SYARIKAT BEKALAN AIR SELANGOR SDN BHD</td>
+                              <td>VBXSYNHW10144</td>
+                              <td>Segambut, Selangor</td>
+                              <td>Kamarul Arifin  013-5883066</td>
+                              <td></td>
+                              <td></td>
+                              <td></td>
+                              <td>4/5/2021</td>
+                            </tr>
+                            
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer class="footer">
+        <div class="container-fluid">
+          <ul class="nav">
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">
+                Purnama
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">
+                About Us
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0)" class="nav-link">
+                Blog
+              </a>
+            </li>
+          </ul>
+          <div class="copyright">
+            ©
+            <script>
+              document.write(new Date().getFullYear())
+            </script> made with <i class="tim-icons icon-heart-2"></i> by
+            <a href="#" target="_blank">Purnama Creative Team</a> for a better web.
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <div class="fixed-plugin">
+    <div class="dropdown show-dropdown">
+      <a href="#" data-toggle="dropdown">
+        <i class="fa fa-cog fa-2x"> </i>
+      </a>
+      <ul class="dropdown-menu">
+        <li class="header-title"> Sidebar Background</li>
+        <li class="adjustments-line">
+          <a href="javascript:void(0)" class="switch-trigger background-color">
+            <div class="badge-colors text-center">
+              <span class="badge filter badge-primary active" data-color="primary"></span>
+              <span class="badge filter badge-info" data-color="blue"></span>
+              <span class="badge filter badge-success" data-color="green"></span>
+            </div>
+            <div class="clearfix"></div>
+          </a>
+        </li>
+        <li class="adjustments-line text-center color-change">
+          <span class="color-label">LIGHT MODE</span>
+          <span class="badge light-badge mr-2"></span>
+          <span class="badge dark-badge ml-2"></span>
+          <span class="color-label">DARK MODE</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!--   Core JS Files   -->
+  <script src="assets/js/core/jquery.min.js"></script>
+  <script src="assets/js/core/popper.min.js"></script>
+  <script src="assets/js/core/bootstrap.min.js"></script>
+  <script src="assets/js/plugins/perfect-scrollbar.jquery.min.js"></script>
+  <!--  Google Maps Plugin    -->
+  <!-- Place this tag in your head or just before your close body tag. -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
+  <!-- Chart JS -->
+  <script src="assets/js/plugins/chartjs.min.js"></script>
+  <!--  Notifications Plugin    -->
+  <script src="assets/js/plugins/bootstrap-notify.js"></script>
+  <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
+  <script src="assets/js/black-dashboard.min.js?v=1.0.0"></script><!-- Black Dashboard DEMO methods, don't include it in your project! -->
+  <script src="assets/demo/demo.js"></script>
+  <script>
+    $(document).ready(function() {
+      $().ready(function() {
+        $sidebar = $('.sidebar');
+        $navbar = $('.navbar');
+        $main_panel = $('.main-panel');
+
+        $full_page = $('.full-page');
+
+        $sidebar_responsive = $('body > .navbar-collapse');
+        sidebar_mini_active = true;
+        white_color = false;
+
+        window_width = $(window).width();
+
+        fixed_plugin_open = $('.sidebar .sidebar-wrapper .nav li.active a p').html();
+
+
+
+        $('.fixed-plugin a').click(function(event) {
+          if ($(this).hasClass('switch-trigger')) {
+            if (event.stopPropagation) {
+              event.stopPropagation();
+            } else if (window.event) {
+              window.event.cancelBubble = true;
+            }
+          }
+        });
+
+        $('.fixed-plugin .background-color span').click(function() {
+          $(this).siblings().removeClass('active');
+          $(this).addClass('active');
+
+          var new_color = $(this).data('color');
+
+          if ($sidebar.length != 0) {
+            $sidebar.attr('data', new_color);
+          }
+
+          if ($main_panel.length != 0) {
+            $main_panel.attr('data', new_color);
+          }
+
+          if ($full_page.length != 0) {
+            $full_page.attr('filter-color', new_color);
+          }
+
+          if ($sidebar_responsive.length != 0) {
+            $sidebar_responsive.attr('data', new_color);
+          }
+        });
+
+        $('.switch-sidebar-mini input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (sidebar_mini_active == true) {
+            $('body').removeClass('sidebar-mini');
+            sidebar_mini_active = false;
+            blackDashboard.showSidebarMessage('Sidebar mini deactivated...');
+          } else {
+            $('body').addClass('sidebar-mini');
+            sidebar_mini_active = true;
+            blackDashboard.showSidebarMessage('Sidebar mini activated...');
+          }
+
+          // we simulate the window Resize so the charts will get updated in realtime.
+          var simulateWindowResize = setInterval(function() {
+            window.dispatchEvent(new Event('resize'));
+          }, 180);
+
+          // we stop the simulation of Window Resize after the animations are completed
+          setTimeout(function() {
+            clearInterval(simulateWindowResize);
+          }, 1000);
+        });
+
+        $('.switch-change-color input').on("switchChange.bootstrapSwitch", function() {
+          var $btn = $(this);
+
+          if (white_color == true) {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').removeClass('white-content');
+            }, 900);
+            white_color = false;
+          } else {
+
+            $('body').addClass('change-background');
+            setTimeout(function() {
+              $('body').removeClass('change-background');
+              $('body').addClass('white-content');
+            }, 900);
+
+            white_color = true;
+          }
+
+
+        });
+
+        $('.light-badge').click(function() {
+          $('body').addClass('white-content');
+        });
+
+        $('.dark-badge').click(function() {
+          $('body').removeClass('white-content');
+        });
+      });
+    });
+  </script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "black-dashboard-free"
+      });
+  </script>
+</body>
+
+</html>
