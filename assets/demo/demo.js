@@ -182,7 +182,7 @@ demo = {
             zeroLineColor: "transparent",
           },
           ticks: {
-            suggestedMin: 60,
+            suggestedMin: 0,
             suggestedMax: 125,
             padding: 20,
             fontColor: "#9a9a9a"
@@ -358,9 +358,9 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
 
     var data = {
-      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'],
+      labels: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
       datasets: [{
-        label: "Data",
+        label: "Dockets",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#d048b6',
@@ -374,7 +374,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 110],
+        data: [5, 5, 3, 2, 5, 4],
       }]
     };
 
@@ -394,9 +394,9 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'],
+      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY'],
       datasets: [{
-        label: "My First dataset",
+        label: "Dockets",
         fill: true,
         backgroundColor: gradientStroke,
         borderColor: '#00d6b4',
@@ -410,14 +410,14 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [90, 27, 60, 12, 80, 90],
+        data: [12, 12, 15, 12, 16, 8],
       }]
     };
 
     var myChart = new Chart(ctxGreen, {
       type: 'line',
       data: data,
-      options: gradientChartOptionsConfigurationWithTooltipGreen
+      // options: gradientChartOptionsConfigurationWithTooltipGreen
 
     });
 
@@ -439,7 +439,7 @@ demo = {
       data: {
         labels: chart_labels,
         datasets: [{
-          label: "My First dataset",
+          label: "Docketss",
           fill: true,
           backgroundColor: gradientStroke,
           borderColor: '#d346b1',
