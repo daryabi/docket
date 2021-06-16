@@ -134,7 +134,7 @@ demo = {
             zeroLineColor: "transparent",
           },
           ticks: {
-            suggestedMin: 60,
+            suggestedMin: 0,
             suggestedMax: 125,
             padding: 20,
             fontColor: "#2380f7"
@@ -358,7 +358,7 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(119,52,169,0)'); //purple colors
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'],
+      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'],
       datasets: [{
         label: "Data",
         fill: true,
@@ -374,7 +374,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [80, 100, 70, 80, 120, 80],
+        data: [80, 100, 70, 80, 120, 110],
       }]
     };
 
@@ -394,7 +394,7 @@ demo = {
     gradientStroke.addColorStop(0, 'rgba(66,134,121,0)'); //green colors
 
     var data = {
-      labels: ['JUL', 'AUG', 'SEP', 'OCT', 'NOV'],
+      labels: ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'],
       datasets: [{
         label: "My First dataset",
         fill: true,
@@ -410,7 +410,7 @@ demo = {
         pointHoverRadius: 4,
         pointHoverBorderWidth: 15,
         pointRadius: 4,
-        data: [90, 27, 60, 12, 80],
+        data: [90, 27, 60, 12, 80, 90],
       }]
     };
 
@@ -543,7 +543,7 @@ demo = {
           borderWidth: 2,
           borderDash: [],
           borderDashOffset: 0.0,
-          data: [53, 20, 10, 80, 100, 45],
+          data: [10, 20, 10, 80, 100, 45],
         }]
       },
       options: gradientBarChartConfiguration
