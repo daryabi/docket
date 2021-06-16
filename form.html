@@ -27,13 +27,13 @@
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="blue | green | orange | red"
     -->
-    <div class="sidebar-wrapper">
+      <div class="sidebar-wrapper">
         <div class="logo">
           <a href="javascript:void(0)" class="simple-text logo-mini">
             Purnama
           </a>
           <a href="javascript:void(0)" class="simple-text logo-normal">
-            Docket Management
+             Docket Managesment
           </a>
         </div>
         <ul class="nav">
@@ -44,15 +44,15 @@
             </a>
           </li>
           <li >
-            <a href="./form.html">
-              <i class="tim-icons icon-puzzle-10"></i>
-              <p>Add</p>
-            </a>
-          </li>
-          <li >
             <a href="./docket.html">
               <i class="tim-icons icon-puzzle-10"></i>
               <p>Dockets</p>
+            </a>
+          </li>
+          <li class="active" >
+            <a href="./form.html">
+              <i class="tim-icons icon-puzzle-10"></i>
+              <p>Add</p>
             </a>
           </li>
           <li>
@@ -67,7 +67,7 @@
               <p>Staff</p>
             </a>
           </li>
-          <li class="active ">
+          <li>
             <a href="./site.html">
               <i class="tim-icons icon-puzzle-10"></i>
               <p>Site</p>
@@ -88,7 +88,7 @@
                 <span class="navbar-toggler-bar bar3"></span>
               </button>
             </div>
-            <a class="navbar-brand" href="javascript:void(0)">Site Table List</a>
+            <a class="navbar-brand" href="javascript:void(0)">User Profile</a>
           </div>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -111,10 +111,12 @@
                   </p>
                 </a>
                 <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
-                    <li class="nav-link"><a href="#" class="nav-item dropdown-item">Fang John responded to your email</a></li>
-                    <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
-                   
-                  </ul>
+                  <li class="nav-link"><a href="#" class="nav-item dropdown-item">Fang John responded to your email</a></li>
+                  <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">You have 5 more tasks</a></li>
+                  <!-- <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Your friend Michael is in town</a></lsi> -->
+                  <!-- <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Email has be</a></li> -->
+                  <!-- <li class="nav-link"><a href="javascript:void(0)" class="nav-item dropdown-item">Another one</a></li> -->
+                </ul>
               </li>
               <li class="dropdown nav-item">
                 <a href="./index.html" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -153,329 +155,112 @@
       <!-- End Navbar -->
       <div class="content">
         <div class="row">
-          <div class="col-md-12">
-            <div class="card ">
+          <div class="col-md-6">
+            <div class="card">
               <div class="card-header">
-                
-                <ul style="list-style-type: none;
-                margin: 0;
-                padding: 0;">
-                  <li style="display: inline; padding-right: 20px;">
-                    <a href="./site.html">
-                    <h4 class="card-title" style="float: left;  color: gray; "> MOE PM Summary 2020</h4>
-                  </a></li>
-                  <li style="display: inline; padding-right: 20px; border-radius: 20px; "><a href="./siteTable.html" style="border-radius: 20px;">
-                    <!-- <button> -->
-                      <h4 class="card-title" style="float: left; padding-left: 20px; border-radius: 20px;"> Site Details and table</h4>
-                    <!-- </button> -->
-                  </a></li>
-                </ul>
+                <h5 class="title">Add Docket</h5>
               </div>
-              
-             <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table tablesorter " id="">
-                    <thead class=" text-primary">
-                      <tr>
-                        <th>
-                          STATE
-                        </th>
-                        <th>
-                            TOTAL (As per JAN 2020)
-                        </th>
-                        <th>
-                            STATUS  OF PM DONE ACTIVITY
-                        </th>
-                        <th class="text-center">
-                            BALANCE
-                        </th>
-                        <th>
-                            % 
-                            Completed 
-                            P.M
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                            Kedah
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td class="text-center">
-                         0
-                        </td>
-                        <td>
-                            100%
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                            Perak
-                        </td>
-                        <td>
-                          22
-                        </td>
-                        <td>
-                          10
-                        </td>
-                        <td class="text-center">
-                         12
-                        </td>
-                        <td>
-                            45%
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                            Selangor
-                        </td>
-                        <td>
-                          1
-                        </td>
-                        <td>
-                          1
-                        </td>
-                        <td class="text-center">
-                          0
-                        </td>
-                        <td>100%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          Johor
-                        </td>
-                        <td>
-                          6
-                        </td>
-                        <td>
-                          4
-                        </td>
-                        <td class="text-center">
-                         2
-                        </td>
-                        <td>67%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            Pahang
-                        </td>
-                        <td>
-                          23
-                        </td>
-                        <td>
-                          15
-                        </td>
-                        <td class="text-center">
-                         8
-                        </td>
-                        <td>65%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            Terengganu
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td>
-                          2
-                        </td>
-                        <td class="text-center">
-                          0
-                        </td>
-                        <td>100%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            Kelantan
-                        </td>
-                        <td>
-                          23
-                        </td>
-                        <td>
-                          15
-                        </td>
-                        <td class="text-center">
-                          8
-                        </td>
-                        <td>65%</td>
-                      </tr>
-                      <tr>
-                          <td>Negeri Sembilan</td>
-                          <td>
-                            2
-                          </td>
-                          <td>
-                            2
-                          </td>
-                          <td class="text-center">
-                            0
-                          </td>
-                          <td>100%</td>
-                      </tr>
-                      <tr>
-                        <td>TOTAL</td>
-                        <td>
-                          81
-                        </td>
-                        <td>
-                          51
-                        </td>
-                        <td class="text-center">
-                          30
-                        </td>
-                        <td>51</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td>
-                            PERCENTAGE ( %)
-                        </td>
-                        <td>
-                          62.96%
-                        </td>
-                        <td class="text-center">
-                          37.04%
-                        </td>
-                        <td>62.96%</td>
-                    </tr>
-                    </tbody>
-                  </table>
-                </div>
+              <div class="card-body">
+                <form>
+                  <div class="row">
+                    <div class="col-md-5 pr-md-1">
+                      <div class="form-group">
+                        <label>SITE</label>
+                        <input type="text" class="form-control" placeholder="site" value="BHP Persiaran Sultan Ibrahim">
+                      </div>
+                    </div>
+                    <div class="col-md-3 px-md-1">
+                      <div class="form-group">
+                        <label>DATE DOCKET RECIVED</label>
+                        <input type="text" class="form-control" placeholder="27/5/2021" value="date">
+                      </div>
+                    </div>
+                    <div class="col-md-4 pl-md-1">
+                      <div class="form-group">
+                        <label for="exampleInputEmail1">STATUS</label>
+                        <input type="text" class="form-control" placeholder="close" value="status">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <div class="col-md-6 pr-md-1">
+                      <div class="form-group">
+                        <label>DATE RESOLVED</label>
+                        <input type="text" class="form-control" placeholder="02/06/2021" value="date">
+                      </div>
+                    </div>
+                    <div class="col-md-6 pl-md-1">
+                      <div class="form-group">
+                        <label>TEAM</label>
+                        <input type="text" class="form-control" placeholder="Fang" value="Fang">
+                      </div>
+                    </div>
+                    
+                  </div>
+                  <div class="row">
+                    <div class="col-md-12">
+                      <div class="form-group">
+                        <label>NOTES</label>
+                        <input type="text" class="form-control" placeholder="modem" value="modem">
+                      </div>
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="card-footer">
+                <a href="./404.html"><button type="submit" class="btn btn-fill btn-primary">Save</button></a>
               </div>
             </div>
           </div>
-          <div class="col-md-12">
-            <div class="card  card-plain">
-              <div class="card-header">
-                <h4 class="card-title"> CORP PM Summary 2020</h4>
-                <!-- <p class="category"> Here is a subtitle for this table</p> -->
-              </div>
-              <div class="card-body">
-                <div class="table-responsive">
-                  <table class="table tablesorter " id="">
-                    <thead class=" text-primary">
-                      <tr>
-                        <th>
-                          STATE
-                        </th>
-                        <th>
-                            TOTAL (As per JAN 2020)
-                        </th>
-                        
-                        <th >
-                            STATUS  OF PM DONE ACTIVITY (till 31/8/2020)
-                        </th>
-                        <th class="text-center">
-                            BALANCE
-                        </th>
-                        <th>  % 
-                            Completed 
-                            P.M</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td>
-                            BHP
-                        </td>
-                        <td>
-                          221
-                        </td>
-                        <td>
-                          143
-                        </td>
-                        <td class="text-center">
-                          78
-                        </td>
-                        <td>65%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            SME
-                        </td>
-                        <td>
-                          50
-                        </td>
-                        <td>
-                          35
-                        </td>
-                        <td class="text-center">
-                          15
-                        </td>
-                        <td>70%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            SAJ
-                        </td>
-                        <td>
-                          21
-                        </td>
-                        <td>
-                          15
-                        </td>
-                        <td class="text-center">
-                          6
-                        </td>
-                        <td>71%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                            SYABAS
-                        </td>
-                        <td>
-                          11
-                        </td>
-                        <td>
-                          7
-                        </td>
-                        <td class="text-center">
-                          4
-                        </td>
-                        <td>64%</td>
-                      </tr>
-                      <tr>
-                        <td>
-                          TOTAL
-                        </td>
-                        <td>
-                          303
-                        </td>
-                        <td>
-                          200
-                        </td>
-                        <td class="text-center">
-                          103
-                        </td>
-                        <td>200</td>
-                      </tr>
-                      <tr>
-                        <td>
-                        </td>
-                        <td>
-                            PERCENTAGE ( %)
-                        </td>
-                        <td>
-                          66.01%
-                        </td>
-                        <td class="text-center">
-                          33.99%
-                        </td>
-                        <td>66.01%</td>
-                      </tr>
+          <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                  <h5 class="title">Add Site</h5>
+                </div>
+                <div class="card-body">
+                  <form>
+                    <div class="row">
+                      <div class="col-md-5 pr-md-1">
+                        <div class="form-group">
+                          <label>STATE</label>
+                          <input type="text" class="form-control" placeholder="site" value="Kedah">
+                        </div>
+                      </div>
+                      <div class="col-md-3 px-md-1">
+                        <div class="form-group">
+                          <label>TOTAL </label>
+                          <input type="text" class="form-control" placeholder="total" value="2">
+                        </div>
+                      </div>
+                      <div class="col-md-4 pl-md-1">
+                        <div class="form-group">
+                          <label for="exampleInputEmail1">STATUS  OF PM DONE ACTIVITY</label>
+                          <input type="text" class="form-control" placeholder="status" value="3">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-md-6 pr-md-1">
+                        <div class="form-group">
+                          <label>BALANCE</label>
+                          <input type="text" class="form-control" placeholder="balance" value="3">
+                        </div>
+                      </div>
+                      <div class="col-md-6 pl-md-1">
+                        <div class="form-group">
+                          <label>% COMPLETED P.M</label>
+                          <input type="text" class="form-control" placeholder="Fang" value="100%">
+                        </div>
+                      </div>
                       
-                    </tbody>
-                  </table>
+                    </div>
+                    
+                  </form>
+                </div>
+                <div class="card-footer">
+                  <a href="./404.html"><button type="submit" class="btn btn-fill btn-primary">Save</button></a>
                 </div>
               </div>
-            </div>
           </div>
         </div>
       </div>
