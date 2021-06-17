@@ -423,7 +423,7 @@ demo = {
 
 
 
-    var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'];
+    var chart_labels = ['J AN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'];
     var chart_data = [0, 2, 0, 2, 1, 3];
 
 
