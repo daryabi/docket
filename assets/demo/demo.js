@@ -424,7 +424,7 @@ demo = {
 
 
     var chart_labels = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN'];
-    var chart_data = [30, 25, 29, 26, 28, 30];
+    var chart_data = [0, 2, 0, 2, 1, 3];
 
 
     var ctx = document.getElementById("chartBig1").getContext('2d');
@@ -466,7 +466,7 @@ demo = {
       myChartData.update();
     });
     $("#1").click(function() {
-      var chart_data = [28, 25, 29, 27, 25, 30];
+      var chart_data = [1, 3, 2, 3, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
@@ -474,42 +474,42 @@ demo = {
     });
 
     $("#2").click(function() {
-      var chart_data = [30, 25, 29, 27, 25, 30];
+      var chart_data = [3, 1, 3, 0, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#3").click(function() {
-      var chart_data = [27, 29, 25, 28, 26, 30];
+      var chart_data = [1, 3, 2, 3, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#4").click(function() {
-      var chart_data = [29, 25, 29, 26, 28, 30];
+      var chart_data = [3, 1, 2, 0, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#5").click(function() {
-      var chart_data = [27, 29, 25, 28, 26, 30];
+      var chart_data = [1, 2, 0, 3, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#6").click(function() {
-      var chart_data = [25, 27, 24, 28, 25, 30];
+      var chart_data = [1, 0, 2, 0, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
       myChartData.update();
     });
     $("#7").click(function() {
-      var chart_data = [28, 25, 29, 26, 28, 30];
+      var chart_data = [1, 2, 0, 3, 1, 2];
       var data = myChartData.config.data;
       data.datasets[0].data = chart_data;
       data.labels = chart_labels;
